@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Mark } from "@/components/Mark";
 import { useCart } from "@/components/CartProvider";
+import { INVESTORS_URL } from "@/lib/site";
 
 const LINKS = [
   { href: "/spirits", label: "Spirits" },
@@ -57,6 +58,9 @@ export function Header() {
             ))}
           </nav>
           <div className="nav-tools">
+            <a className="nav-investors" href={INVESTORS_URL}>
+              Investors
+            </a>
             <button
               className="menu-btn"
               type="button"
@@ -85,6 +89,9 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <a className="menu-investors" href={INVESTORS_URL}>
+            Investors
+          </a>
         </nav>
       ) : null}
     </>

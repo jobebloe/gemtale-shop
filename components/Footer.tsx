@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mark } from "@/components/Mark";
-import { CONTACT_EMAIL, STUDIO } from "@/lib/site";
+import { CONTACT_EMAIL, INVESTORS_URL, STUDIO } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -19,6 +19,7 @@ export function Footer() {
           <Link href="/keepsakes">Keepsakes</Link>
           <Link href="/partners">Partners</Link>
           <Link href="/story">The story</Link>
+          <a href={INVESTORS_URL}>Investors</a>
         </div>
         <div>
           <Link href="/bag">Bag</Link>

@@ -1,5 +1,6 @@
 export const CONTACT_EMAIL = "info.likeyou@gmx.de";
 export const STUDIO = "Grafing bei München";
+export const INVESTORS_URL = "https://jobebloe.github.io/gemtale_investors/";
 
 export const SHIPPING_CENTS = 395;
 export const FREE_DELIVERY_CENTS = 2500;
