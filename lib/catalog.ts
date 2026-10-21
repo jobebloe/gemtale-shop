@@ -224,8 +224,8 @@ export const products: Product[] = [
       "Your own writing stays free either way — every entry, the handover, and the knowledge that a new chapter has begun. Premium is for everything around that.",
     ],
     price: 2499,
-    image: "/products/premium.jpg",
-    imageAlt: "A single iridescent gem, the mark of GemTale Premium",
+    image: "",
+    imageAlt: "Premium",
     plate: { kicker: "Once", title: "Premium" },
     facts: [
       { label: "Price", value: "€24.99 once, per account" },

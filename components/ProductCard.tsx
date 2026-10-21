@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Product } from "@/lib/catalog";
-import { asset, formatEUR } from "@/lib/site";
+import { ProductVisual } from "@/components/ProductVisual";
+import { formatEUR } from "@/lib/site";
 
 export function ProductCard({ product }: { product: Product }) {
   const href = `/${product.collection}/${product.slug}`;
@@ -10,14 +11,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link className="card" href={href}>
       <div className="card-media">
-        {product.image ? (
-          <img src={asset(product.image)} alt={product.imageAlt} />
-        ) : (
-          <div className="plate">
-            <span>{product.plate?.kicker}</span>
-            <strong>{product.plate?.title}</strong>
-          </div>
-        )}
+        <ProductVisual product={product} alt={product.imageAlt} />
         {product.sample ? <span className="sample-tag">Sample colourway</span> : null}
       </div>
       <div className="card-meta">

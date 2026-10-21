@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "@/components/CartProvider";
 import { Qty } from "@/components/Qty";
+import { ProductVisual } from "@/components/ProductVisual";
 import type { Product } from "@/lib/catalog";
 import { findColor } from "@/lib/catalog";
-import { asset, formatEUR } from "@/lib/site";
+import { formatEUR } from "@/lib/site";
 
 export function BuyPanel({ product }: { product: Product }) {
   const params = useSearchParams();
@@ -40,14 +41,7 @@ export function BuyPanel({ product }: { product: Product }) {
     <div className="pdp">
       <div>
         <div className="stage">
-          {src ? (
-            <img src={asset(src)} alt={alt} />
-          ) : (
-            <div className="plate">
-              <span>{product.plate?.kicker}</span>
-              <strong>{product.plate?.title}</strong>
-            </div>
-          )}
+          <ProductVisual product={product} src={src} alt={alt} />
         </div>
         {product.packImage ? (
           <button

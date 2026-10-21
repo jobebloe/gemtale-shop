@@ -336,6 +336,43 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   line-height: 1.02;
   letter-spacing: -0.03em;
 }
+.premium-cover {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.55), transparent 42%),
+    var(--stage);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  container-type: inline-size;
+}
+.premium-badge {
+  width: 24%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 26, 23, 0.55);
+  box-shadow: inset 0 0 0 0.35em rgba(28, 26, 23, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.premium-badge svg { width: 54%; height: 54%; }
+.card-media .premium-cover,
+.stage .premium-cover {
+  position: absolute;
+  inset: 0;
+}
+.premium-cover strong {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 14cqw;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
 
 .color-row {
   list-style: none;
@@ -481,13 +518,20 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   border-top: 1px solid var(--border);
   align-items: center;
 }
-.line img, .line .thumb {
+.line .thumb img,
+.line .thumb .premium-cover,
+.line .thumb .plate {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.line .thumb {
   width: 88px;
   height: 88px;
-  object-fit: cover;
+  display: flex;
   background: var(--stage);
+  overflow: hidden;
 }
-.line .thumb { display: flex; }
 .line .thumb .plate { padding: 8px; }
 .line .thumb .plate strong { font-size: 0.95rem; }
 .line-name { font-family: var(--serif); color: var(--fg); font-size: 1.15rem; text-decoration: none; }
