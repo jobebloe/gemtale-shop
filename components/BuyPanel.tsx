@@ -39,7 +39,7 @@ export function BuyPanel({ product }: { product: Product }) {
 
   return (
     <div className="pdp">
-      <div>
+      <div className="pdp-visual">
         <div className="stage">
           <ProductVisual product={product} src={src} alt={alt} />
         </div>
@@ -58,11 +58,6 @@ export function BuyPanel({ product }: { product: Product }) {
         <p className="eyebrow">{product.eyebrow}</p>
         <h1>{product.name}</h1>
         <p className="price-line">{product.price != null ? formatEUR(product.price) : ""}</p>
-        <div className="prose">
-          {product.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
         {colors.length > 0 ? (
           <fieldset className="option">
             <legend>
@@ -112,6 +107,11 @@ export function BuyPanel({ product }: { product: Product }) {
             : "Incl. VAT. Nothing to ship — the unlock sits on your account."}
         </p>
         <p className="fine">Reserving does not charge you. Payment opens at launch.</p>
+        <div className="prose">
+          {product.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
         <dl className="facts">
           {product.facts.map((fact) => (
             <div key={fact.label}>

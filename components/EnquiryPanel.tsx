@@ -44,7 +44,7 @@ export function EnquiryPanel({ product }: { product: Product }) {
 
   return (
     <div className="pdp">
-      <div>
+      <div className="pdp-visual">
         <div className="stage">
           {product.image ? (
             <img src={asset(product.image)} alt={product.imageAlt} />

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { BagDrawer } from "@/components/BagDrawer";
 import { CartProvider } from "@/components/CartProvider";
 import { Footer } from "@/components/Footer";
@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   description:
     "Mimir, the spirit that carries your story. Launch colourways from €12.99. No subscription.",
   icons: { icon: asset("/gemtale-ghost-mark.svg") },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#050505",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

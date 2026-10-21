@@ -65,9 +65,18 @@ export function Header() {
               className="menu-btn"
               type="button"
               aria-expanded={menuOpen}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen((open) => !open)}
             >
-              {menuOpen ? "Close" : "Menu"}
+              {menuOpen ? (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 6l12 12M18 6 6 18" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              )}
             </button>
             <button
               className="nav-cart"
