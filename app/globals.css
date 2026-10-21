@@ -137,6 +137,41 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   padding: 8px 6px;
 }
 .nav-investors:hover { color: var(--fg); }
+.nav-cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  color: var(--fg);
+  padding: 8px 10px;
+}
+.nav-cart svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav-cart circle { fill: currentColor; stroke: none; }
+.nav-cart-count {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.62rem;
+  line-height: 16px;
+  text-align: center;
+}
 .menu {
   position: fixed;
   inset: 0;

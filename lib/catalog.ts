@@ -224,8 +224,8 @@ export const products: Product[] = [
       "Your own writing stays free either way — every entry, the handover, and the knowledge that a new chapter has begun. Premium is for everything around that.",
     ],
     price: 2499,
-    image: "",
-    imageAlt: "",
+    image: "/products/premium.jpg",
+    imageAlt: "A single iridescent gem, the mark of GemTale Premium",
     plate: { kicker: "Once", title: "Premium" },
     facts: [
       { label: "Price", value: "€24.99 once, per account" },
@@ -251,8 +251,8 @@ export const products: Product[] = [
       "The pages follow the A5 layout already in the app. Printing opens with our print partner. Reserving one here does not charge you.",
     ],
     price: 4400,
-    image: "",
-    imageAlt: "",
+    image: "/products/year-book.jpg",
+    imageAlt: "An ivory hardcover with a small iridescent gem set in the cover",
     plate: { kicker: "January", title: "The Year Book" },
     facts: [
       { label: "Price", value: "€44, incl. VAT" },
@@ -274,8 +274,8 @@ export const products: Product[] = [
       "It is the part that stays yours after he travels. Printing opens with our print partner.",
     ],
     price: 2400,
-    image: "",
-    imageAlt: "",
+    image: "/products/chapter-book.jpg",
+    imageAlt: "A slim charcoal hardcover with a small amber gem set in the cover",
     plate: { kicker: "At handover", title: "The Chapter Book" },
     facts: [
       { label: "Price", value: "€24, incl. VAT" },
@@ -297,8 +297,8 @@ export const products: Product[] = [
       "Printed to order once keepsake checkout opens.",
     ],
     price: 5900,
-    image: "",
-    imageAlt: "",
+    image: "/products/full-tale.jpg",
+    imageAlt: "A thick stone-linen hardcover with a small gold gem set in the cover",
     plate: { kicker: "The chain", title: "The Full Tale" },
     facts: [
       { label: "Price", value: "€59, incl. VAT" },

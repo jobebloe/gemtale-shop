@@ -70,14 +70,20 @@ export function Header() {
               {menuOpen ? "Close" : "Menu"}
             </button>
             <button
-              className="nav-text"
+              className="nav-cart"
               type="button"
+              aria-label={ready && count > 0 ? `Bag, ${count}` : "Bag"}
               onClick={() => {
                 setMenuOpen(false);
                 setDrawerOpen(!drawerOpen);
               }}
             >
-              Bag{ready && count > 0 ? ` (${count})` : ""}
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 7h13l-1.4 8.2a1.5 1.5 0 0 1-1.48 1.25H9.1a1.5 1.5 0 0 1-1.47-1.2L5.2 4.8A1 1 0 0 0 4.22 4H2.5" />
+                <circle cx="9" cy="20" r="1.35" />
+                <circle cx="17" cy="20" r="1.35" />
+              </svg>
+              {ready && count > 0 ? <span className="nav-cart-count">{count}</span> : null}
             </button>
           </div>
         </div>
