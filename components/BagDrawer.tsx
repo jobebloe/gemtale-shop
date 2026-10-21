@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { useCart } from "@/components/CartProvider";
 import { Qty } from "@/components/Qty";
 import { summarize } from "@/lib/bag";
-import { formatEUR } from "@/lib/site";
+import { asset, formatEUR } from "@/lib/site";
 
 export function BagDrawer() {
   const { lines, drawerOpen, setDrawerOpen, setQty, remove } = useCart();
@@ -41,7 +41,7 @@ export function BagDrawer() {
             summary.resolved.map((item) => (
               <div className="line" key={item.line.key}>
                 {item.image ? (
-                  <img src={item.image} alt="" />
+                  <img src={asset(item.image)} alt="" />
                 ) : (
                   <div className="thumb">
                     <div className="plate">

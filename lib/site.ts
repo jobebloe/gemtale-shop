@@ -5,6 +5,13 @@ export const SHIPPING_CENTS = 395;
 export const FREE_DELIVERY_CENTS = 2500;
 export const VAT_RATE = 1.19;
 
+export function asset(path: string) {
+  if (!path) return path;
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  if (!base || path.startsWith(base)) return path;
+  return `${base}${path}`;
+}
+
 export function formatEUR(cents: number) {
   const sign = cents < 0 ? "−" : "";
   const abs = Math.abs(cents);

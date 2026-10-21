@@ -32,7 +32,7 @@ body::after {
   z-index: -1;
   pointer-events: none;
   opacity: 0.45;
-  background-image: url("/feather-pattern.svg");
+  background-image: var(--pattern);
   background-size: 280px 280px;
   mask-image: radial-gradient(ellipse 85% 70% at 50% 20%, black 15%, transparent 78%);
 }

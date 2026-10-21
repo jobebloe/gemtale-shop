@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import type { Product } from "@/lib/catalog";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { asset, CONTACT_EMAIL } from "@/lib/site";
 
 export function EnquiryPanel({ product }: { product: Product }) {
   const min = product.enquiry?.minQty ?? 1;
@@ -47,7 +47,7 @@ export function EnquiryPanel({ product }: { product: Product }) {
       <div>
         <div className="stage">
           {product.image ? (
-            <img src={product.image} alt={product.imageAlt} />
+            <img src={asset(product.image)} alt={product.imageAlt} />
           ) : (
             <div className="plate">
               <span>{product.plate?.kicker}</span>

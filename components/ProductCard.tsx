@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/catalog";
-import { formatEUR } from "@/lib/site";
+import { asset, formatEUR } from "@/lib/site";
 
 export function ProductCard({ product }: { product: Product }) {
   const href = `/${product.collection}/${product.slug}`;
@@ -11,7 +11,7 @@ export function ProductCard({ product }: { product: Product }) {
     <Link className="card" href={href}>
       <div className="card-media">
         {product.image ? (
-          <img src={product.image} alt={product.imageAlt} />
+          <img src={asset(product.image)} alt={product.imageAlt} />
         ) : (
           <div className="plate">
             <span>{product.plate?.kicker}</span>

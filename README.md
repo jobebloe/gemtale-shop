@@ -13,6 +13,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+The published preview is [https://jobebloe.github.io/gemtale-shop/](https://jobebloe.github.io/gemtale-shop/).
+
 ## Before this can take orders
 
 - Publish a complete imprint (address, legal form, register, VAT id).

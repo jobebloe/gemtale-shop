@@ -6,7 +6,7 @@ import { useCart } from "@/components/CartProvider";
 import { Qty } from "@/components/Qty";
 import type { Product } from "@/lib/catalog";
 import { findColor } from "@/lib/catalog";
-import { formatEUR } from "@/lib/site";
+import { asset, formatEUR } from "@/lib/site";
 
 export function BuyPanel({ product }: { product: Product }) {
   const params = useSearchParams();
@@ -41,7 +41,7 @@ export function BuyPanel({ product }: { product: Product }) {
       <div>
         <div className="stage">
           {src ? (
-            <img src={src} alt={alt} />
+            <img src={asset(src)} alt={alt} />
           ) : (
             <div className="plate">
               <span>{product.plate?.kicker}</span>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProductGrid } from "@/components/ProductCard";
 import { SPIRIT_COLORS, getProduct, productsIn } from "@/lib/catalog";
+import { asset } from "@/lib/site";
 
 export default function HomePage() {
   const entry = getProduct("mimir");
@@ -14,7 +15,7 @@ export default function HomePage() {
     <>
       <section className="hero">
         <img
-          src="/products/hero-spirits.jpg"
+          src={asset("/products/hero-spirits.jpg")}
           alt="Three Mimir spirits: Ember, Mint, and Coral"
         />
         <div className="wrap hero-caption">
@@ -59,7 +60,7 @@ export default function HomePage() {
 
       <section className="wrap section">
         <div className="split">
-          <img src="/products/mimir-ember.jpg" alt="Mimir in Ember, charcoal with a red base and an iridescent gem" />
+          <img src={asset("/products/mimir-ember.jpg")} alt="Mimir in Ember, charcoal with a red base and an iridescent gem" />
           <div>
             <p className="eyebrow">From owner to owner</p>
             <p className="quote">He falls onward. You had your turn. The chapter you wrote stays yours.</p>
