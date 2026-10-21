@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { ProductGrid } from "@/components/ProductCard";
-import { SPIRIT_COLORS, getProduct, productsIn } from "@/lib/catalog";
+import { ProductCard, ProductGrid } from "@/components/ProductCard";
+import { SPIRIT_COLORS, getProduct, productsIn, type Product } from "@/lib/catalog";
 import { asset } from "@/lib/site";
 
 export default function HomePage() {
-  const entry = getProduct("mimir");
-  const standard = getProduct("mimir-standard");
-  const gift = getProduct("mimir-gift");
-  const spirits = [entry, standard, gift].filter((item) => item != null);
+  const spirits = [
+    { product: getProduct("mimir"), image: "/products/card-mimir.jpg" },
+    { product: getProduct("mimir-standard"), image: "/products/card-standard.jpg" },
+    { product: getProduct("mimir-gift"), image: "/products/card-gift.jpg" },
+  ].filter((item): item is { product: Product; image: string } => Boolean(item.product));
   const keepsakes = productsIn("keepsakes");
 
   return (
@@ -26,7 +27,29 @@ export default function HomePage() {
       </section>
 
       <section className="wrap offer">
-        <ProductGrid products={spirits} cta="Buy now" />
+        <ul className="grid grid-2">
+          {spirits.map((item) => (
+            <li key={item.product.slug}>
+              <ProductCard product={item.product} cta="Buy now" image={item.image} />
+            </li>
+          ))}
+          <li>
+            <a className="card" href="#keepsakes">
+              <div className="card-media keepsake-tile">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M12 8h24a2 2 0 0 1 2 2v30H16a4 4 0 0 1-4-4V8Z" />
+                  <path d="M12 8v28a4 4 0 0 0 4 4h26" />
+                  <path d="M16 8v34" />
+                  <path d="M22 17h12M22 23h12M22 29h8" />
+                </svg>
+              </div>
+              <div className="card-meta">
+                <span className="card-name">Keepsakes &amp; Accessories</span>
+              </div>
+              <span className="btn-primary btn-card">View</span>
+            </a>
+          </li>
+        </ul>
         <p className="color-note">
           <span className="color-dots" aria-hidden="true">
             {SPIRIT_COLORS.map((color) => (
@@ -54,7 +77,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="wrap section">
+      <section className="wrap section" id="keepsakes">
         <div className="section-head">
           <h2>Keepsakes &amp; Accessories</h2>
           <Link className="link" href="/keepsakes">

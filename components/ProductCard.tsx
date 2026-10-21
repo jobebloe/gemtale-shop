@@ -3,7 +3,15 @@ import type { Product } from "@/lib/catalog";
 import { ProductVisual } from "@/components/ProductVisual";
 import { formatEUR } from "@/lib/site";
 
-export function ProductCard({ product, cta }: { product: Product; cta?: string }) {
+export function ProductCard({
+  product,
+  cta,
+  image,
+}: {
+  product: Product;
+  cta?: string;
+  image?: string;
+}) {
   const href = `/${product.collection}/${product.slug}`;
   const price =
     product.price != null ? formatEUR(product.price) : product.priceLabel ?? "On request";
@@ -11,7 +19,7 @@ export function ProductCard({ product, cta }: { product: Product; cta?: string }
   return (
     <Link className="card" href={href}>
       <div className="card-media">
-        <ProductVisual product={product} alt={product.imageAlt} />
+        <ProductVisual product={product} src={image} alt={product.imageAlt} />
         {product.sample ? <span className="sample-tag">Sample colourway</span> : null}
       </div>
       <div className="card-meta">
