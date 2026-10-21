@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProductGrid } from "@/components/ProductCard";
 import { SPIRIT_COLORS, getProduct, productsIn } from "@/lib/catalog";
+import { asset } from "@/lib/site";
 
 export default function HomePage() {
   const entry = getProduct("mimir");
@@ -11,31 +12,29 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="wrap">
-        <header className="page-intro">
-          <p className="eyebrow">Launch colourways</p>
-          <h1>Mimir</h1>
-          <p className="lede">
-            A small spirit for a bag or a pocket. One sculpt, five launch colours, three ways to have him.
-            The app is free with every spirit.
-          </p>
-          <p className="intro-cta">
-            <Link className="btn-primary" href="/spirits/mimir">
-              Buy now
-            </Link>
-          </p>
-        </header>
-        <ProductGrid products={spirits} />
-        <ul className="color-row">
-          {SPIRIT_COLORS.map((color) => (
-            <li key={color.id}>
-              <Link href={`/spirits/mimir?color=${color.id}`}>
-                <span className="swatch" style={{ background: color.swatch }} />
-                {color.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <section className="hero">
+        <img
+          src={asset("/products/hero-spirits.jpg")}
+          alt="Three Mimir spirits standing in a line: Ember, Mint, and Coral"
+        />
+        <div className="wrap hero-caption">
+          <div>
+            <p className="eyebrow">Launch colourways</p>
+            <h1 className="display">Mimir</h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="wrap offer">
+        <ProductGrid products={spirits} cta="Buy now" />
+        <p className="color-note">
+          <span className="color-dots" aria-hidden="true">
+            {SPIRIT_COLORS.map((color) => (
+              <span key={color.id} className="swatch" style={{ background: color.swatch }} />
+            ))}
+          </span>
+          Each spirit comes in five colours — Ember, Mint, Coral, Lavender, and Sun. Choose the colour on the next page.
+        </p>
       </section>
 
       <section className="wrap section how">

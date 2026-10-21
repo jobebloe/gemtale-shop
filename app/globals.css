@@ -241,7 +241,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 
 .hero img {
   width: 100%;
-  height: min(78dvh, 860px);
+  aspect-ratio: 16 / 9;
+  max-height: min(78dvh, 860px);
   object-fit: cover;
   object-position: center;
   background: var(--stage);
@@ -317,6 +318,19 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   flex: none;
   width: auto;
   min-width: 180px;
+}
+.offer { padding: 28px 0 8px; }
+.color-note {
+  margin-top: 22px;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.color-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 .how { max-width: 42rem; }
 .how h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
@@ -537,6 +551,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   text-align: center;
   text-decoration: none;
 }
+.btn-primary.btn-card {
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+  flex: none;
+  min-width: 0;
+  margin-top: 12px;
+  padding: 8px 14px;
+  font-size: 0.64rem;
+}
 .btn-primary:hover { background: #e8e8e8; }
 .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
 .qty {
@@ -732,7 +756,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   .logo svg { width: 22px; height: 22px; flex-shrink: 0; }
   .nav-tools { gap: 2px; }
   .nav-cart, .menu-btn { padding: 8px; width: 40px; height: 40px; }
-  .hero img { height: min(46dvh, 380px); }
+  .hero img { max-height: none; }
   .display { font-size: clamp(2.15rem, 11vw, 3.2rem); }
   .intro { padding-top: 36px; }
   .intro .display { font-size: clamp(1.85rem, 8vw, 2.6rem); margin: 6px 0 12px; }
@@ -745,6 +769,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   }
   .section-head h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .intro-cta .btn-primary { width: 100%; }
+  .offer { padding-top: 22px; }
   .how h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .page-intro { padding: 28px 0 18px; }
   .page-intro h1 { font-size: clamp(2.1rem, 10vw, 3rem); margin-bottom: 10px; }
