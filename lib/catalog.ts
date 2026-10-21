@@ -108,9 +108,9 @@ export const GEM_COLORS: Colorway[] = [
 ];
 
 const spiritShared: Fact[] = [
-  { label: "Sculpt", value: "One figure, with a loop for a bag or a key" },
+  { label: "Sculpt", value: "One figure, with a loop if you want him on a bag or a chain" },
   { label: "Size", value: "36 × 39.6 × 41.2 mm, including the loop" },
-  { label: "Material", value: "PETG. Chosen so he can live on a bag and be passed on" },
+  { label: "Material", value: "PETG. Chosen so he can live anywhere and be passed on" },
   { label: "Inside", value: "One passive NFC tag. No battery, no cable, no charging" },
   { label: "Pairing", value: "Unlock your phone and hold it against him once" },
   { label: "The app", value: "Free with every spirit. Your own entries are never locked" },
@@ -126,7 +126,7 @@ export const products: Product[] = [
     summary:
       "The spirit in the colour of the filament, with a sleeve and a Gem # card. €12.99, incl. VAT.",
     paragraphs: [
-      "Mimir is a small spirit for a bag or a pocket. He carries a gem, and that gem is the thread through every chapter written on him.",
+      "Mimir is a small spirit. He lives wherever he wants — in a bag, on a desk, on a chain. He carries a gem, and that gem is the thread through every chapter written on him.",
       "This is the entry finish: colour from the print, a printed sleeve, and a card with his Gem #. The app that opens when you pair him is free. Nothing about it renews.",
     ],
     price: 1299,
