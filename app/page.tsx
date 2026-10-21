@@ -82,7 +82,7 @@ export default function HomePage() {
             View all
           </Link>
         </div>
-        <ProductGrid products={keepsakes} />
+        <ProductGrid products={keepsakes} cta="Buy now" />
       </section>
     </>
   );
