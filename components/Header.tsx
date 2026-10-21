@@ -42,9 +42,9 @@ export function Header() {
       <header className="header">
         <p className="preview">Preview · payment opens at launch</p>
         <div className="wrap nav">
-          <Link className="logo" href="/" aria-label="GemTale home">
+          <Link className="logo" href="/" aria-label="GemTale Shop home">
             <Mark />
-            <span>GemTale</span>
+            <span>GemTale Shop</span>
           </Link>
           <nav className="nav-links" aria-label="Shop">
             {LINKS.map((link) => (

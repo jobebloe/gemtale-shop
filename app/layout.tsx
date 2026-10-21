@@ -8,8 +8,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "GemTale",
-    template: "%s — GemTale",
+    default: "GemTale Shop",
+    template: "%s — GemTale Shop",
   },
   description:
     "Mimir, the spirit that carries your story. Launch colourways from €12.99. No subscription.",

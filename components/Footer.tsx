@@ -7,9 +7,9 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap footer-grid">
         <div>
-          <Link className="logo" href="/">
+          <Link className="logo" href="/" aria-label="GemTale Shop home">
             <Mark />
-            <span>GemTale</span>
+            <span>GemTale Shop</span>
           </Link>
           <p>The gem it carries holds your story.</p>
           <p>{STUDIO}</p>

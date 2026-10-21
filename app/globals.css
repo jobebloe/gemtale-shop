@@ -116,7 +116,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 .logo svg { width: 28px; height: 28px; display: block; }
 .logo span {
   font-family: var(--serif);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   font-size: 1.05rem;
 }
 .nav-links {
@@ -747,8 +747,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   .nav { height: var(--header); gap: 8px; }
   .logo { min-width: 0; }
   .logo span {
-    font-size: 0.92rem;
-    letter-spacing: 0.12em;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
