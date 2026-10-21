@@ -61,10 +61,10 @@ export default function HomePage() {
       <section className="wrap section how">
         <p className="eyebrow">The story</p>
         <h2>How it works</h2>
-        <p className="quote">He falls onward. You had your turn. The chapter you wrote stays yours.</p>
+        <p className="quote">He falls onward. Now it&apos;s your turn. The chapter you write stays yours.</p>
         <p className="lede">
-          Hold an unlocked phone against him once. Write the evening. Pass him on when the chapter is
-          finished — yours stays sealed, and you can follow the next one. There is no battery and no
+          Hold an unlocked phone against him once. Write the evening. When the chapter is finished you can
+          pass him on — yours stays sealed, and you can follow the next one. There is no battery and no
           subscription. The app is free, including every entry you write. Premium, when you want it, is
           paid once.
         </p>
