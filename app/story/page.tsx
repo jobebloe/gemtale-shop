@@ -29,7 +29,7 @@ export default function StoryPage() {
       </p>
       <p>
         The app’s base — your own writing, the handover, and a look at the new chapter — is free with every
-        spirit. Premium is a one-time unlock. There is no subscription.
+        spirit. Premium is a one-time unlock. It is not a subscription, and there are no recurring costs.
       </p>
       <p>
         <Link className="link" href="/spirits/mimir">

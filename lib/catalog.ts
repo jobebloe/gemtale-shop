@@ -173,7 +173,7 @@ export const products: Product[] = [
     summary:
       "Painted, boxed, and the one-time GemTale Premium unlock is included. €29.99, incl. VAT.",
     paragraphs: [
-      "Painted, boxed, and GemTale Premium is included for your account. Premium is paid once. It does not renew.",
+      "Painted, boxed, and GemTale Premium is included for your account. Premium is paid once. It is not a subscription, and there are no recurring costs.",
       "Premium adds further story voices, the full chain of owners side by side, more than one spirit on the account, and a PDF of a chapter or a year.",
     ],
     price: 2999,
@@ -218,9 +218,9 @@ export const products: Product[] = [
     name: "GemTale Premium",
     collection: "keepsakes",
     eyebrow: "The app",
-    summary: "The one-time unlock. €24.99, kept forever. There is no subscription.",
+    summary: "The one-time unlock. €24.99, kept forever. It is not a subscription.",
     paragraphs: [
-      "Paid once, and kept. There is no subscription on GemTale.",
+      "Paid once, and kept. It is not a subscription, and there are no recurring costs.",
       "Your own writing stays free either way — every entry, the handover, and the knowledge that a new chapter has begun. Premium is for everything around that.",
     ],
     price: 2499,

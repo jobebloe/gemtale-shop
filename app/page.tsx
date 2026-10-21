@@ -64,9 +64,9 @@ export default function HomePage() {
         <p className="quote">He falls onward. Now it&apos;s your turn. The chapter you write stays yours.</p>
         <p className="lede">
           Hold an unlocked phone against him once. Write the evening. When the chapter is finished you can
-          pass him on — yours stays sealed, and you can follow the next one. There is no battery and no
-          subscription. The app is free, including every entry you write. Premium, when you want it, is
-          paid once.
+          pass him on — yours stays sealed, and you can follow the next one. There is no battery. The app
+          is free, including every entry you write. Premium, when you want it, is paid once — it is not a
+          subscription, and there are no recurring costs.
         </p>
         <p className="how-link">
           <Link className="link" href="/story">

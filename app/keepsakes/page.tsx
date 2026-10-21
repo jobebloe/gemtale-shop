@@ -14,8 +14,8 @@ export default function KeepsakesPage() {
         <p className="eyebrow">Keepsakes</p>
         <h1>What stays</h1>
         <p className="lede">
-          Premium is paid once. The books are printed from a timeline. An extra gem swaps into the bezel he
-          already has.
+          Premium is paid once — it is not a subscription, and there are no recurring costs. The books are
+          printed from a timeline. An extra gem swaps into the bezel he already has.
         </p>
       </header>
       <ProductGrid products={productsIn("keepsakes")} />
