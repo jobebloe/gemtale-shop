@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="wrap hero-caption">
           <div>
             <p className="eyebrow">Launch colourways</p>
-            <h1 className="display">Mimir</h1>
+            <h1 className="display">Products</h1>
           </div>
         </div>
       </section>
@@ -35,13 +35,11 @@ export default function HomePage() {
           ))}
           <li>
             <a className="card" href="#keepsakes">
-              <div className="card-media keepsake-tile">
-                <svg viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M12 8h24a2 2 0 0 1 2 2v30H16a4 4 0 0 1-4-4V8Z" />
-                  <path d="M12 8v28a4 4 0 0 0 4 4h26" />
-                  <path d="M16 8v34" />
-                  <path d="M22 17h12M22 23h12M22 29h8" />
-                </svg>
+              <div className="card-media">
+                <img
+                  src={asset("/products/card-keepsakes.jpg")}
+                  alt="Five gems resting on a year book"
+                />
               </div>
               <div className="card-meta">
                 <span className="card-name">Keepsakes &amp; Accessories</span>
