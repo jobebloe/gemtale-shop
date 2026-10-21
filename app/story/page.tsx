@@ -13,8 +13,8 @@ export default function StoryPage() {
       <h1>A spirit who keeps falling onward.</h1>
       <p>
         Mimir is the character the product is made from. In the story he falls from world to world, and he
-        attaches himself to an ordinary person so their days become a chapter. In the shop, that person is
-        whoever is holding him.
+        attaches himself to an ordinary person so their days become a chapter. That person is whoever is
+        holding him.
       </p>
       <h2>What you do with him</h2>
       <p>
