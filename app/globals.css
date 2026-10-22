@@ -801,7 +801,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 }
 @media (max-width: 899px) {
-  :root { --header: 52px; --preview: 26px; --wrap-pad: 16px; }
+  :root { --header: 52px; --preview: 26px; --wrap-pad: 22px; }
   .nav { height: var(--header); gap: 8px; }
   .logo { min-width: 0; }
   .logo span {
@@ -827,16 +827,29 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
   }
   .intro-cta .btn-primary { width: 100%; }
   .offer { padding-top: 22px; }
-  .offer .card-name { font-size: 0.9rem; }
+  .offer .card-name { font-size: clamp(0.84rem, 3.6vw, 0.98rem); }
   .how h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .page-intro { padding: 28px 0 18px; }
   .page-intro h1 { font-size: clamp(2.1rem, 10vw, 3rem); margin-bottom: 10px; }
   .lede { font-size: 1rem; }
   .quote { font-size: clamp(1.35rem, 6vw, 1.8rem); }
-  .card-meta { margin-top: 10px; gap: 8px; align-items: flex-start; }
-  .card-name { font-size: 0.95rem; }
-  .card-meta:has(.price-was) .card-name { white-space: nowrap; }
-  .card-price { font-size: 0.82rem; flex-shrink: 0; }
+  .card-meta {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+  .card-name {
+    font-size: clamp(0.84rem, 3.6vw, 0.98rem);
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+  .card-meta:not(:has(.card-price)) .card-name { white-space: normal; }
+  .card-price {
+    font-size: 0.82rem;
+    align-self: flex-end;
+    flex-shrink: 0;
+  }
   .price {
     flex-direction: column;
     align-items: flex-end;
