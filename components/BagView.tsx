@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCart } from "@/components/CartProvider";
 import { Qty } from "@/components/Qty";
+import { Price } from "@/components/Price";
 import { ProductVisual } from "@/components/ProductVisual";
 import { summarize } from "@/lib/bag";
 import { formatEUR } from "@/lib/site";
@@ -50,7 +51,9 @@ export function BagView() {
                 />
               </div>
               <div className="line-side">
-                <p>{formatEUR(item.lineTotal)}</p>
+                <p>
+                  <Price product={item.product} amount={item.lineTotal} showOff={false} />
+                </p>
                 <button className="remove" type="button" onClick={() => remove(item.line.key)}>
                   Remove
                 </button>

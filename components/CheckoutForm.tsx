@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/components/CartProvider";
+import { Price } from "@/components/Price";
 import { summarize } from "@/lib/bag";
 import { formatEUR } from "@/lib/site";
 
@@ -123,7 +124,9 @@ export function CheckoutForm() {
                 {item.product.name}
                 {item.label ? ` · ${item.label}` : ""} × {item.line.quantity}
               </span>
-              <span>{formatEUR(item.lineTotal)}</span>
+              <span>
+                <Price product={item.product} amount={item.lineTotal} showOff={false} />
+              </span>
             </div>
           ))}
           <div>

@@ -16,6 +16,7 @@ export type Product = {
   summary: string;
   paragraphs: string[];
   price: number | null;
+  compareAt?: number;
   priceLabel?: string;
   image: string;
   imageAlt: string;
@@ -169,14 +170,15 @@ export const products: Product[] = [
     slug: "mimir-gift",
     name: "Mimir Premium",
     collection: "spirits",
-    eyebrow: "The bundle",
+    eyebrow: "Launch offer",
     summary:
-      "Painted, boxed, and the one-time GemTale Premium unlock is included. €29.99, incl. VAT.",
+      "Painted, boxed, and the one-time GemTale Premium unlock is included. Launch offer €26.99, was €29.99, incl. VAT.",
     paragraphs: [
-      "Painted, boxed, and GemTale Premium is included for your account. Premium is paid once. It is not a subscription, and there are no recurring costs.",
+      "Painted, boxed, and GemTale Premium is included for your account. For the start he is 10% off: €26.99, was €29.99. Premium is paid once. It is not a subscription, and there are no recurring costs.",
       "Premium adds further story voices, the full chain of owners side by side, more than one spirit on the account, and a PDF of a chapter or a year.",
     ],
-    price: 2999,
+    price: 2699,
+    compareAt: 2999,
     defaultColor: "ember",
     image: "/products/mimir-gift.jpg",
     imageAlt: "Mimir Premium beside an open charcoal gift box",
@@ -187,6 +189,7 @@ export const products: Product[] = [
       { label: "Finish", value: "Painted" },
       { label: "In the box", value: "The spirit and a Gem # card, in a rigid gift box" },
       { label: "Included", value: "GemTale Premium, once, for the account that pairs him" },
+      { label: "Launch offer", value: "€26.99, was €29.99 — 10% off for the start" },
     ],
     ships: true,
     related: ["mimir-standard", "premium", "year-book"],
@@ -409,6 +412,13 @@ export function productsIn(collection: Product["collection"]) {
 
 export function findColor(product: Product, colorId: string) {
   return product.colors?.find((color) => color.id === colorId);
+}
+
+export function promoPercent(product: Product) {
+  if (product.price == null || product.compareAt == null || product.compareAt <= product.price) {
+    return null;
+  }
+  return Math.round((1 - product.price / product.compareAt) * 100);
 }
 
 export function variantLabel(product: Product, colorId: string | null) {

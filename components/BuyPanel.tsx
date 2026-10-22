@@ -5,8 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { useCart } from "@/components/CartProvider";
 import { Qty } from "@/components/Qty";
 import { ProductVisual } from "@/components/ProductVisual";
+import { Price } from "@/components/Price";
 import type { Product } from "@/lib/catalog";
-import { findColor } from "@/lib/catalog";
+import { findColor, promoPercent } from "@/lib/catalog";
 import { formatEUR } from "@/lib/site";
 
 export function BuyPanel({ product }: { product: Product }) {
@@ -57,7 +58,12 @@ export function BuyPanel({ product }: { product: Product }) {
       <div className="pdp-copy">
         <p className="eyebrow">{product.eyebrow}</p>
         <h1>{product.name}</h1>
-        <p className="price-line">{product.price != null ? formatEUR(product.price) : ""}</p>
+        <p className="price-line">
+          <Price product={product} />
+        </p>
+        {promoPercent(product) != null && product.compareAt != null ? (
+          <p className="hint">Launch offer. Was {formatEUR(product.compareAt)}.</p>
+        ) : null}
         {colors.length > 0 ? (
           <fieldset className="option">
             <legend>

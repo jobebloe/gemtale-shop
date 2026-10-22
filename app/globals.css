@@ -387,6 +387,40 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 }
 .card-name { font-family: var(--serif); font-size: 1.12rem; }
 .card-price { color: var(--muted); font-size: 0.92rem; }
+.price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.price-was {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.price-now { color: var(--fg); }
+.price-off {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  color: var(--bg);
+  background: var(--fg);
+  padding: 3px 7px;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+.promo-tag {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: var(--fg);
+  color: var(--bg);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.64rem;
+  padding: 6px 8px;
+}
 .sample-tag {
   position: absolute;
   left: 12px;
@@ -537,6 +571,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 .pdp-copy { min-width: 0; }
 .pdp h1 { font-size: clamp(2.3rem, 4vw, 3.6rem); line-height: 0.98; margin-bottom: 12px; }
 .price-line { color: var(--fg); font-size: 1.05rem; margin-bottom: 22px; }
+.price-line .price { justify-content: flex-start; }
+.price-line + .hint { margin-top: -12px; margin-bottom: 18px; }
+.line-side .price {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
 .prose { display: grid; gap: 14px; max-width: 38rem; }
 .prose p { color: var(--text); }
 .option { border: 0; margin: 18px 0 0; padding: 0; }
