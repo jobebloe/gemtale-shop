@@ -18,7 +18,7 @@ export default function HomePage() {
           src={asset("/products/hero-spirits.jpg")}
           alt="Three Mimir spirits standing in a line: Ember, Mint, and Coral"
         />
-        <div className="wrap hero-caption">
+        <div className="wrap home hero-caption">
           <div>
             <p className="eyebrow">Launch colourways</p>
             <h1 className="display">Products</h1>
@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="wrap offer">
+      <section className="wrap home offer">
         <ul className="grid grid-2">
           {spirits.map((item) => (
             <li key={item.product.slug}>
@@ -58,7 +58,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="wrap section how">
+      <section className="wrap home section how">
         <p className="eyebrow">The story</p>
         <h2>How it works</h2>
         <p className="quote">He falls onward. Now it&apos;s your turn. The chapter you write stays yours.</p>
@@ -75,7 +75,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="wrap section" id="keepsakes">
+      <section className="wrap home section" id="keepsakes">
         <div className="section-head">
           <h2>Keepsakes &amp; Accessories</h2>
           <Link className="link" href="/keepsakes">

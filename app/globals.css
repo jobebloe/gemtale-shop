@@ -814,6 +814,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 }
 @media (max-width: 899px) {
   :root { --header: 52px; --preview: 26px; --wrap-pad: 22px; }
+  .wrap.home { padding-left: 36px; padding-right: 36px; }
   .nav { height: var(--header); gap: 8px; }
   .logo { min-width: 0; }
   .logo span {
