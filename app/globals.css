@@ -323,6 +323,18 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.03e
 }
 .offer { padding: 28px 0 8px; }
 .offer .grid { grid-template-columns: 1fr 1fr; }
+.offer .grid > * { display: flex; }
+.offer .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  width: 100%;
+}
+.offer .card-media,
+.offer .card-meta { align-self: stretch; width: 100%; }
+.offer .card-meta { margin-bottom: 12px; }
+.offer .btn-primary.btn-card { margin-top: auto; }
 .offer .card-media {
   background: #c8c8c8;
   outline: 1px solid var(--accent);
