@@ -26,8 +26,10 @@ export function Price({
   return (
     <span className="price">
       <s className="price-was">{formatEUR(was)}</s>
-      <span className="price-now">{formatEUR(now)}</span>
-      {showOff ? <span className="price-off">−{off}%</span> : null}
+      <span className="price-current">
+        <span className="price-now">{formatEUR(now)}</span>
+        {showOff ? <span className="price-off">−{off}%</span> : null}
+      </span>
     </span>
   );
 }
