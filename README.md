@@ -26,8 +26,8 @@ The published preview is [https://jobebloe.github.io/gemtale-shop/](https://jobe
 
 | Piece | Price |
 | --- | --- |
-| Mimir Standard | €12.99 |
-| Mimir Gift | €19.99 |
+| Mimir Starter | €12.99 |
+| Mimir Shine | €19.99 |
 | Mimir Premium, GemTale Premium included | €26.99 launch offer, was €29.99 |
 | Extra gem | €3.99 |
 | GemTale Premium | €24.99 once |

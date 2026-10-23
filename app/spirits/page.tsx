@@ -4,7 +4,7 @@ import { productsIn } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Spirits",
-  description: "Mimir in five launch colours. Standard €12.99, Gift €19.99, Premium launch offer €26.99.",
+  description: "Mimir in five launch colours. Starter €12.99, Shine €19.99, Premium launch offer €26.99.",
 };
 
 export default function SpiritsPage() {

@@ -121,7 +121,7 @@ const spiritShared: Fact[] = [
 export const products: Product[] = [
   {
     slug: "mimir",
-    name: "Mimir Standard",
+    name: "Mimir Starter",
     collection: "spirits",
     eyebrow: "Entry",
     summary:
@@ -133,7 +133,7 @@ export const products: Product[] = [
     price: 1299,
     defaultColor: "mint",
     image: "/products/mimir-mint.jpg",
-    imageAlt: "Mimir Standard in mint, with a cream base and an amber gem",
+    imageAlt: "Mimir Starter in mint, with a cream base and an amber gem",
     colors: SPIRIT_COLORS,
     facts: [
       ...spiritShared,
@@ -145,7 +145,7 @@ export const products: Product[] = [
   },
   {
     slug: "mimir-standard",
-    name: "Mimir Gift",
+    name: "Mimir Shine",
     collection: "spirits",
     eyebrow: "For a gift",
     summary: "The same sculpt, painted and packed in a rigid gift box. €19.99, incl. VAT.",
@@ -156,7 +156,7 @@ export const products: Product[] = [
     price: 1999,
     defaultColor: "lavender",
     image: "/products/mimir-lavender.jpg",
-    imageAlt: "Mimir Gift in lavender, with an ivory base and a champagne gem",
+    imageAlt: "Mimir Shine in lavender, with an ivory base and a champagne gem",
     colors: SPIRIT_COLORS,
     facts: [
       ...spiritShared,
