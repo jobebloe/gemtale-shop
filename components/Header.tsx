@@ -10,6 +10,7 @@ import { INVESTORS_URL } from "@/lib/site";
 const LINKS = [
   { href: "/spirits", label: "Spirits" },
   { href: "/keepsakes", label: "Keepsakes" },
+  { href: "/impressions", label: "Impressions" },
   { href: "/partners", label: "Partners" },
   { href: "/story", label: "The story" },
 ];
