@@ -4,7 +4,7 @@ import { asset } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressions",
-  description: "How Mimir travels — bags, desks, flights, and the hands that pass him on.",
+  description: "How Mimir travels — bags, desks, flights, and the places he stays.",
 };
 
 const IMPRESSIONS = [
@@ -39,12 +39,6 @@ const IMPRESSIONS = [
     line: "The little things make the biggest memories.",
   },
   {
-    src: "/impressions/handover.jpg",
-    alt: "Adult hands passing a coral Mimir outdoors",
-    title: "Passed on",
-    line: "Forward a moment. Continue the story.",
-  },
-  {
     src: "/impressions/window.jpg",
     alt: "A mint Mimir on an open notebook by a bright window",
     title: "In the morning",
@@ -65,8 +59,8 @@ export default function ImpressionsPage() {
         <p className="eyebrow">Impressions</p>
         <h1>Where he goes</h1>
         <p className="lede">
-          Mimir is made to travel — clipped to a bag, left on a desk, carried onto a plane, and passed from
-          hand to hand. These are impressions of how he lives with people.
+          Mimir is made to travel — clipped to a bag, left on a desk, carried onto a plane, and shared between
+          friends. These are impressions of how he lives with people.
         </p>
       </header>
 
