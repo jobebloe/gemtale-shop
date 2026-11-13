@@ -62,5 +62,5 @@ Optional: set `STRIPE_PRICE_<SLUG>` (e.g. `STRIPE_PRICE_PREMIUM`) for Dashboard 
 | Chapter Book | €24 |
 | Full Tale | €59 |
 | Collaboration | about €7–€8 wholesale, from ~500 |
-| House Gem | quoted, often 2–12 |
+| House Gem | quoted, often 2–12 — B2B login for brand storytelling; optional co-brand; guest hand-off secondary |
 | Corporate gifting | about €12–€16, from ~200 |

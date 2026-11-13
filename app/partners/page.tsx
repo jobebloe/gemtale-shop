@@ -4,7 +4,8 @@ import { productsIn } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Partners",
-  description: "Collaboration editions, house gems, and corporate gifting. Mimir stays Mimir.",
+  description:
+    "Collaboration editions, House Gems for brand storytelling, and corporate gifting. Mimir stays Mimir.",
 };
 
 export default function PartnersPage() {
@@ -14,7 +15,9 @@ export default function PartnersPage() {
         <p className="eyebrow">Partners</p>
         <h1>Your colours. His name.</h1>
         <p className="lede">
-          A co-branded edition is a filament change and an embossed mark — no tooling. Mimir stays ours. The
+          Co-branded editions are a filament change and an embossed mark — no tooling. A{" "}
+          <strong>House Gem</strong> adds a B2B login so your team can tell an emotional brand story
+          (optional co-branding; guest hand-off at hotels remains secondary). Mimir stays ours. The
           colourways below are samples, not signed partnerships.
         </p>
       </header>
